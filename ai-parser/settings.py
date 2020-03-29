@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'ai-parser.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'ai-parser.wsgi.application'
 # ASGI_APPLICATION = "parser_api.routing.application"
 
 # Database
