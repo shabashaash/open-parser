@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'parser_api_app',
+    'ai-parser.parser_api_app',
     'channels',
 ]
 
