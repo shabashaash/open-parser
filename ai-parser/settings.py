@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
-ROOT_URLCONF = 'parser_api.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
@@ -76,8 +76,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'parser_api.wsgi.application'
-ASGI_APPLICATION = "parser_api.routing.application"
+WSGI_APPLICATION = 'wsgi.application'
+# ASGI_APPLICATION = "parser_api.routing.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
