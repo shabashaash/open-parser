@@ -77,7 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ai-parser.wsgi.application'
-# ASGI_APPLICATION = "parser_api.routing.application"
+ASGI_APPLICATION = "ai-parser.routing.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
