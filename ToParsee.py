@@ -839,9 +839,10 @@ async def generateP(url,models,url_):
     elems = []
     options = webdriver.ChromeOptions()
     options.add_argument('headless') 
-#     d = DesiredCapabilities.CHROME
+    d = DesiredCapabilities.CHROME
     # d['loggingPrefs'] = {'browser':'ALL'}
-    driver = webdriver.Chrome("/opt/app-root/src/chromedriver.exe",options=options)
+    #driver = webdriver.PhantomJS()#.Chrome("/opt/app-root/src/chromedriver.exe",options=options)
+    driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com/wd/hub',desired_capabilities=capabilities,options=options)
     driver.get(url) #https://rbb-holod.ru/catalog/freony-xladony https://morena.ru/catalog/teploobmennoe-oborudovanie/ http://www.aholod.ru/catalog/42/ https://www.eldorado.ru/c/stiralnye-mashiny/
     js = """
                 var res = [];
