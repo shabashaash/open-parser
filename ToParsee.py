@@ -9,7 +9,7 @@ from selenium import webdriver
 import logging
 # from selenium.webdriver.remote.remote_connection import LOGGER
 # LOGGER.setLevel(logging.WARNING)
-# from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import csv
 import pickle
