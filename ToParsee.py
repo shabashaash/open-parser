@@ -7,8 +7,8 @@ from concurrent.futures import ProcessPoolExecutor
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import logging
-from selenium.webdriver.remote.remote_connection import LOGGER
-LOGGER.setLevel(logging.WARNING)
+# from selenium.webdriver.remote.remote_connection import LOGGER
+# LOGGER.setLevel(logging.WARNING)
 # from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import csv
@@ -839,9 +839,9 @@ async def generateP(url,models,url_):
     elems = []
     options = webdriver.ChromeOptions()
     options.add_argument('headless') 
-    # d = DesiredCapabilities.CHROME
+#     d = DesiredCapabilities.CHROME
     # d['loggingPrefs'] = {'browser':'ALL'}
-    driver = webdriver.Chrome("chromedriver.exe",options=options)
+    driver = webdriver.Chrome("/chromedriver.exe",options=options)
     driver.get(url) #https://rbb-holod.ru/catalog/freony-xladony https://morena.ru/catalog/teploobmennoe-oborudovanie/ http://www.aholod.ru/catalog/42/ https://www.eldorado.ru/c/stiralnye-mashiny/
     js = """
                 var res = [];
