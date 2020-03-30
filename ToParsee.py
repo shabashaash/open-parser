@@ -920,6 +920,7 @@ async def generateP(url,models,url_):
     dft = pd.DataFrame(data=arr,columns = columns)
     # print(dft)
     driver.close()
+    print('closedDriver')
     dft = dft.replace('NaN','0')
     dft = dft.fillna(0)
     dft = dft.replace('Infinity','1')
