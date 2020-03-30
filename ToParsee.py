@@ -841,7 +841,7 @@ async def generateP(url,models,url_):
     options.add_argument('headless') 
 #     d = DesiredCapabilities.CHROME
     # d['loggingPrefs'] = {'browser':'ALL'}
-    driver = webdriver.Chrome("./chromedriver.exe",options=options)
+    driver = webdriver.Chrome("/opt/app-root/src/chromedriver.exe",options=options)
     driver.get(url) #https://rbb-holod.ru/catalog/freony-xladony https://morena.ru/catalog/teploobmennoe-oborudovanie/ http://www.aholod.ru/catalog/42/ https://www.eldorado.ru/c/stiralnye-mashiny/
     js = """
                 var res = [];
