@@ -878,6 +878,7 @@ async def generateP(url,models,url_):
     capabilities = DesiredCapabilities.FIREFOX
     capabilities['marionette'] = True
     driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com:4444',desired_capabilities=capabilities)
+    print('drrr')
     driver.get(url) #https://rbb-holod.ru/catalog/freony-xladony https://morena.ru/catalog/teploobmennoe-oborudovanie/ http://www.aholod.ru/catalog/42/ https://www.eldorado.ru/c/stiralnye-mashiny/
     js = """
                 var res = [];
@@ -948,13 +949,13 @@ async def generateP(url,models,url_):
                 return res
                 """
     arr = driver.execute_script(js)#/^[0-9\s+]*[(]{1,2}[0-9]{1,4}[)]{1,2}[-\s\./0-9]*/g
-    # print(arr)
+    print(arr)
     # for entry in driver.get_log('browser'):
     #     if entry['level']=='INFO' and '|' in entry['message']:
     #         arr.append(str(entry['message'].split('|')[-1]).replace('\\u003C','').replace('\\','').replace('"','').split(',')[:-1])
     dft = pd.DataFrame(data=arr,columns = columns)
     print('BeforeclosedDriver')
-    #driver.close()
+    driver.close()
     print('closedDriver')
     dft = dft.replace('NaN','0')
     dft = dft.fillna(0)
