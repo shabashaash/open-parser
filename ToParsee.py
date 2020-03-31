@@ -840,37 +840,37 @@ async def generateP(url,models,url_):
     elems = []
     options = webdriver.ChromeOptions()
     options.add_argument('headless') 
-    d = "{
-  "a": {
-    "applicationCacheEnabled": false,
-    "rotatable": false,
-    "mobileEmulationEnabled": false,
-    "networkConnectionEnabled": false,
-    "chrome": {
-      "chromedriverVersion": "2.35 (0)",
-      "userDataDir": "/tmp/.org.chromium.Chromium.2EhY8R"
-    },
-    "takesHeapSnapshot": true,
-    "pageLoadStrategy": "normal",
-    "databaseEnabled": false,
-    "handlesAlerts": true,
-    "hasTouchScreen": false,
-    "version": "66.0.3359.181",
-    "platform": "Linux",
-    "browserConnectionEnabled": false,
-    "nativeEvents": true,
-    "acceptSslCerts": false,
-    "acceptInsecureCerts": false,
-    "locationContextEnabled": true,
-    "webStorageEnabled": true,
-    "browserName": "chrome",
-    "takesScreenshot": true,
-    "javascriptEnabled": true,
-    "cssSelectorsEnabled": true,
-    "setWindowRect": true,
-    "unexpectedAlertBehaviour": ""
-  }
-}"
+    d = {
+      "a": {
+        "applicationCacheEnabled": false,
+        "rotatable": false,
+        "mobileEmulationEnabled": false,
+        "networkConnectionEnabled": false,
+        "chrome": {
+          "chromedriverVersion": "2.35 (0)",
+          "userDataDir": "/tmp/.org.chromium.Chromium.2EhY8R"
+        },
+        "takesHeapSnapshot": true,
+        "pageLoadStrategy": "normal",
+        "databaseEnabled": false,
+        "handlesAlerts": true,
+        "hasTouchScreen": false,
+        "version": "66.0.3359.181",
+        "platform": "Linux",
+        "browserConnectionEnabled": false,
+        "nativeEvents": true,
+        "acceptSslCerts": false,
+        "acceptInsecureCerts": false,
+        "locationContextEnabled": true,
+        "webStorageEnabled": true,
+        "browserName": "chrome",
+        "takesScreenshot": true,
+        "javascriptEnabled": true,
+        "cssSelectorsEnabled": true,
+        "setWindowRect": true,
+        "unexpectedAlertBehaviour": ""
+      }
+    }
     # d['loggingPrefs'] = {'browser':'ALL'}resolve_ip
     #driver = webdriver.PhantomJS()#.Chrome("/opt/app-root/src/chromedriver.exe",options=options)
     print('beforeDriver')
