@@ -953,8 +953,8 @@ async def generateP(url,models,url_):
     #     if entry['level']=='INFO' and '|' in entry['message']:
     #         arr.append(str(entry['message'].split('|')[-1]).replace('\\u003C','').replace('\\','').replace('"','').split(',')[:-1])
     dft = pd.DataFrame(data=arr,columns = columns)
-    # print(dft)
-    driver.close()
+    print('BeforeclosedDriver')
+    #driver.close()
     print('closedDriver')
     dft = dft.replace('NaN','0')
     dft = dft.fillna(0)
