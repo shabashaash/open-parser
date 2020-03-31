@@ -838,43 +838,46 @@ async def generateP(url,models,url_):
     # print(columns)
     arr = []
     elems = []
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless') 
-    d = {
-      "a": {
-        "applicationCacheEnabled": "false",
-        "rotatable": "false",
-        "mobileEmulationEnabled": "false",
-        "networkConnectionEnabled": "false",
-        "chrome": {
-          "chromedriverVersion": "2.35 (0)",
-          "userDataDir": "/tmp/.org.chromium.Chromium.2EhY8R"
-        },
-        "takesHeapSnapshot": "true",
-        "pageLoadStrategy": "normal",
-        "databaseEnabled": "false",
-        "handlesAlerts": "true",
-        "hasTouchScreen": "false",
-        "version": "66.0.3359.181",
-        "platform": "Linux",
-        "browserConnectionEnabled": "false",
-        "nativeEvents": "true",
-        "acceptSslCerts": "false",
-        "acceptInsecureCerts": "false",
-        "locationContextEnabled": "true",
-        "webStorageEnabled": "true",
-        "browserName": "chrome",
-        "takesScreenshot": "true",
-        "javascriptEnabled": "true",
-        "cssSelectorsEnabled": "true",
-        "setWindowRect": "true",
-        "unexpectedAlertBehaviour": ""
-      }
-    }
+#     options = webdriver.ChromeOptions()
+#     options.add_argument('headless') 
+#     d = {
+#       "a": {
+#         "applicationCacheEnabled": "false",
+#         "rotatable": "false",
+#         "mobileEmulationEnabled": "false",
+#         "networkConnectionEnabled": "false",
+#         "chrome": {
+#           "chromedriverVersion": "2.35 (0)",
+#           "userDataDir": "/tmp/.org.chromium.Chromium.2EhY8R"
+#         },
+#         "takesHeapSnapshot": "true",
+#         "pageLoadStrategy": "normal",
+#         "databaseEnabled": "false",
+#         "handlesAlerts": "true",
+#         "hasTouchScreen": "false",
+#         "version": "66.0.3359.181",
+#         "platform": "Linux",
+#         "browserConnectionEnabled": "false",
+#         "nativeEvents": "true",
+#         "acceptSslCerts": "false",
+#         "acceptInsecureCerts": "false",
+#         "locationContextEnabled": "true",
+#         "webStorageEnabled": "true",
+#         "browserName": "chrome",
+#         "takesScreenshot": "true",
+#         "javascriptEnabled": "true",
+#         "cssSelectorsEnabled": "true",
+#         "setWindowRect": "true",
+#         "unexpectedAlertBehaviour": ""
+#       }
+#     }
     # d['loggingPrefs'] = {'browser':'ALL'}resolve_ip
     #driver = webdriver.PhantomJS()#.Chrome("/opt/app-root/src/chromedriver.exe",options=options)
     print('beforeDriver')
-    driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com:5555/wd/hub',desired_capabilities=d,options=options)
+#     driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com:5555/wd/hub',desired_capabilities=d,options=options)
+    capabilities = DesiredCapabilities.FIREFOX()
+    capabilities['marionette'] = True
+    driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com/wd/hub',desired_capabilities=capabilities)
     driver.get(url) #https://rbb-holod.ru/catalog/freony-xladony https://morena.ru/catalog/teploobmennoe-oborudovanie/ http://www.aholod.ru/catalog/42/ https://www.eldorado.ru/c/stiralnye-mashiny/
     js = """
                 var res = [];
