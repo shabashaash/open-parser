@@ -875,7 +875,7 @@ async def generateP(url,models,url_):
     #driver = webdriver.PhantomJS()#.Chrome("/opt/app-root/src/chromedriver.exe",options=options)
     print('beforeDriver')
 #     driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com:5555/wd/hub',desired_capabilities=d,options=options)
-    capabilities = DesiredCapabilities.FIREFOX()
+    capabilities = DesiredCapabilities.FIREFOX
     capabilities['marionette'] = True
     driver = webdriver.Remote(command_executor='http://selenium-openshift-ai-parser.apps.us-east-1.starter.openshift-online.com/wd/hub',desired_capabilities=capabilities)
     driver.get(url) #https://rbb-holod.ru/catalog/freony-xladony https://morena.ru/catalog/teploobmennoe-oborudovanie/ http://www.aholod.ru/catalog/42/ https://www.eldorado.ru/c/stiralnye-mashiny/
