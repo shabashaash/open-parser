@@ -86,16 +86,7 @@ ASGI_APPLICATION = "ai-parser.routing.application"
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES = {}
 # DATABASES['default'].update(db_from_env)
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd32sv73hbhmps1',
-#         'USER' : 'ttxnhkcbzrbiqq',
-#         'PASSWORD' : 'f583106b3377f888d39e2848b19dee6f8c87019490bab476f4c9fcaba851ac2a',
-#         'HOST' : 'ec2-46-137-156-205.eu-west-1.compute.amazonaws.com',
-#         'PORT' : '5432'
-#     }
-# }
+
 # DATABASES = {
 #     'default':{
 #         'ENGINE': 'django.db.backends.postgresql',
